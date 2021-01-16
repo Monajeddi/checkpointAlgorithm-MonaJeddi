@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    x, V:STRING
+    countV, countW , L : INTEGER
+BEGIN
+    Write " write a sentence"
+    Read x
+    L:=Len(x)
+    Write "There is ", L, "characters in this sentence"
+    countW:=0
+    FOR i FROM 1 TO Len(x) STEP step  DO
+        IF Mid(x, i , 1)=" " THEN
+            countW:=countW+1
+        END_IF
+    i:=i+1 
+    END_FOR
+    Write "There is",countW , "words in this sentence"
+    countV:=0
+    //V:="aeiouy"
+   // FOR i FROM 1 TO Len(x) STEP step  DO
+    //    set_instructions
+   // END_FOR
+   FOR i FROM 1 TO Len(x) 
+       IF Mid(x , i , 1)="a" || Mid(x , i , 1)="e" || Mid(x , i , 1)="i" ||
+        Mid(x , i , 1)="o" || Mid(x , i , 1)="u" ||Mid(x , i , 1)="y" THEN
+           countV:=countV+1
+       END_IF
+   END_FOR
+   Write "There is",countV , "vowels in this sentence"
+END

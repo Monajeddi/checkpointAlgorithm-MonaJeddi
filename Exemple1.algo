@@ -1,0 +1,21 @@
+ALGORITHM Checkpoint_algorithm
+VAR
+    x : CHAR :='';
+    l , countV , countW : INTEGER := 0;
+BEGIN
+    WHILE (x <> '.') DO
+        read (x);
+        l :=l+1;
+        IF (x=' ') THEN
+            countW:=countW+1;
+        END_IF
+
+        IF (x in ['a' , 'e', 'i', 'o', 'u' , 'y']) THEN
+            countV :=countV+1;
+        END_IF
+
+    END_WHILE
+    Write "There is ", l, "characters in this sentence"
+    Write "There is",countW , "words in this sentence"
+    Write "There is",countV , "vowels in this sentence"
+END
